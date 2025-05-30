@@ -24,8 +24,8 @@ const ImageGallery = () => {
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
-      alt: "Recepción de clínica con personal atendiendo",
+      src: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=600&fit=crop",
+      alt: "Doctor atendiendo paciente en consulta médica",
     }
   ];
 
