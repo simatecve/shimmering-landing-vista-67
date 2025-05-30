@@ -4,7 +4,7 @@ import { ArrowDown, Heart, Shield } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden bg-gradient-to-br from-ema-blue-900 via-ema-blue-800 to-ema-blue-700">
+    <section id="inicio" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-ema-blue-900 via-ema-blue-800 to-ema-blue-700 pt-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>

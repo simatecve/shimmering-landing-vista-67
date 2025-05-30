@@ -10,11 +10,13 @@ const Footer = () => {
             {/* Logo and Company Info */}
             <div className="md:col-span-2 space-y-6">
               <div className="flex items-center space-x-3">
-                <img 
-                  src="/lovable-uploads/969aed98-6687-442f-8183-ae236f43690a.png" 
-                  alt="EMA SALUD Logo" 
-                  className="w-12 h-12"
-                />
+                <div className="w-12 h-12 bg-white rounded-lg p-1 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/969aed98-6687-442f-8183-ae236f43690a.png" 
+                    alt="EMA SALUD Logo" 
+                    className="w-10 h-10"
+                  />
+                </div>
                 <span className="text-2xl font-bold">EMA SALUD</span>
               </div>
               

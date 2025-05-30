@@ -1,9 +1,8 @@
-
 import { Home, Users, Stethoscope } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-ema-blue-50">
+    <section id="nosotros" className="py-20 bg-gradient-to-b from-white to-ema-blue-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
