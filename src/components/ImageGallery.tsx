@@ -9,23 +9,23 @@ const ImageGallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
+      src: "/lovable-uploads/0b6f2ec5-b057-4750-b496-3870505b94ec.png",
       alt: "Doctor consultando con paciente en consultorio médico",
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=800&h=600&fit=crop",
+      src: "/lovable-uploads/4f6a9e06-d289-4d0c-ae6b-a9d55dd471fe.png",
       alt: "Sala de espera moderna de clínica médica",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
-      alt: "Médico revisando paciente con estetoscopio",
+      src: "/lovable-uploads/c71a0835-8897-45c7-b99c-2b82605971bf.png",
+      alt: "Médico examinando paciente en consulta",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=600&fit=crop",
-      alt: "Doctor atendiendo paciente en consulta médica",
+      src: "/lovable-uploads/7b303119-d26a-46c1-a329-072eb3d7fa55.png",
+      alt: "Consultorio dental moderno con equipamiento avanzado",
     }
   ];
 
