@@ -11,43 +11,61 @@ const ImageGallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=600&fit=crop",
-      alt: "Paciente consultando con profesional de la salud",
+      src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
+      alt: "Doctor consultando con paciente en consultorio médico",
       category: "Consultas"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
-      alt: "Profesional médico trabajando",
-      category: "Profesionales"
-    },
-    {
-      id: 3,
-      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
-      alt: "Equipo médico colaborando",
-      category: "Equipo"
-    },
-    {
-      id: 4,
-      src: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop",
-      alt: "Ambiente de consulta cómodo",
+      src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=800&h=600&fit=crop",
+      alt: "Sala de espera moderna de clínica médica",
       category: "Instalaciones"
     },
     {
-      id: 5,
+      id: 3,
       src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
-      alt: "Tecnología médica avanzada",
-      category: "Tecnología"
+      alt: "Médico revisando paciente con estetoscopio",
+      category: "Atención"
+    },
+    {
+      id: 4,
+      src: "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?w=800&h=600&fit=crop",
+      alt: "Equipo médico colaborando en diagnóstico",
+      category: "Equipo"
+    },
+    {
+      id: 5,
+      src: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&h=600&fit=crop",
+      alt: "Consultorio médico con equipamiento moderno",
+      category: "Instalaciones"
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
-      alt: "Atención personalizada",
+      src: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&h=600&fit=crop",
+      alt: "Doctora explicando tratamiento a paciente",
+      category: "Consultas"
+    },
+    {
+      id: 7,
+      src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
+      alt: "Recepción de clínica con personal atendiendo",
       category: "Servicios"
+    },
+    {
+      id: 8,
+      src: "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=800&h=600&fit=crop",
+      alt: "Médico utilizando tecnología médica avanzada",
+      category: "Tecnología"
+    },
+    {
+      id: 9,
+      src: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=600&fit=crop",
+      alt: "Paciente sonriendo después de consulta exitosa",
+      category: "Atención"
     }
   ];
 
-  const categories = ["Todos", "Consultas", "Profesionales", "Equipo", "Instalaciones", "Tecnología", "Servicios"];
+  const categories = ["Todos", "Consultas", "Instalaciones", "Atención", "Equipo", "Servicios", "Tecnología"];
   const [activeCategory, setActiveCategory] = useState("Todos");
 
   const filteredImages = activeCategory === "Todos" 
@@ -118,14 +136,14 @@ const ImageGallery = () => {
                         <ZoomIn className="h-5 w-5" />
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-4xl w-full p-0 border-0">
+                    <DialogContent className="max-w-4xl w-full p-0 border-0 bg-black/90">
                       <div className="relative">
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-auto max-h-[80vh] object-contain"
+                          className="w-full h-auto max-h-[85vh] object-contain mx-auto"
                         />
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                           <span className="inline-block px-3 py-1 bg-ema-blue-600 text-white text-sm rounded-full mb-2">
                             {image.category}
                           </span>
