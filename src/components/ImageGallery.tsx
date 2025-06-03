@@ -9,47 +9,46 @@ const ImageGallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "/lovable-uploads/0b6f2ec5-b057-4750-b496-3870505b94ec.png",
-      alt: "Doctor consultando con paciente en consultorio médico",
+      src: "/lovable-uploads/2de66669-077f-478d-b253-57c6215ec82d.png",
+      alt: "Fachada del Centro Médico Libertador - EMA SALUD",
     },
     {
       id: 2,
-      src: "/lovable-uploads/4f6a9e06-d289-4d0c-ae6b-a9d55dd471fe.png",
-      alt: "Sala de espera moderna de clínica médica",
+      src: "/lovable-uploads/f8839434-85f7-451b-a0eb-12938d00a6ca.png",
+      alt: "Entrada principal del Centro Médico Libertador con señalización EMA SALUD",
     },
     {
       id: 3,
-      src: "/lovable-uploads/c71a0835-8897-45c7-b99c-2b82605971bf.png",
-      alt: "Médico examinando paciente en consulta",
+      src: "/lovable-uploads/63310948-4cf8-4603-918c-ed6d68e5111b.png",
+      alt: "Sala de espera cómoda con servicios médicos especializados",
     },
     {
       id: 4,
-      src: "/lovable-uploads/7b303119-d26a-46c1-a329-072eb3d7fa55.png",
-      alt: "Consultorio dental moderno con equipamiento avanzado",
+      src: "/lovable-uploads/498f1acd-b7d1-4338-a484-fccdddf9643c.png",
+      alt: "Área de recepción moderna del centro médico",
     }
   ];
 
   return (
-    <section id="galeria" className="py-20 bg-gradient-to-br from-ema-blue-50 to-white">
-      <div className="container mx-auto px-4">
+    <section id="galeria" className="py-16 md:py-20 bg-gradient-to-br from-ema-blue-50 to-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-ema-blue-900 mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-ema-blue-900 mb-4 md:mb-6">
             Nuestra Galería
           </h2>
-          <p className="text-xl text-ema-blue-700 max-w-3xl mx-auto leading-relaxed">
-            Conocé nuestras instalaciones, equipo profesional y el ambiente cálido 
-            que caracteriza a EMA SALUD. Cada imagen refleja nuestro compromiso 
-            con tu bienestar.
+          <p className="text-lg md:text-xl text-ema-blue-700 max-w-4xl mx-auto leading-relaxed px-4">
+            Conocé nuestras instalaciones del Centro Médico Libertador. Cada imagen 
+            refleja nuestro compromiso con la excelencia médica y tu bienestar.
           </p>
         </div>
 
-        {/* Gallery Grid - 4 images in horizontal layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Gallery Grid - Responsive layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {galleryImages.map((image) => (
             <Card 
               key={image.id} 
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 shadow-md"
+              className="group overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 shadow-md bg-white"
             >
               <CardContent className="p-0 relative">
                 <AspectRatio ratio={4/3}>
@@ -57,31 +56,40 @@ const ImageGallery = () => {
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
                   />
                   
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-ema-blue-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <p className="text-white font-medium text-sm">{image.alt}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-ema-blue-900/90 via-ema-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                      <p className="text-white font-medium text-xs sm:text-sm leading-tight">
+                        {image.alt}
+                      </p>
                     </div>
                   </div>
 
                   {/* Zoom Icon */}
                   <Dialog>
                     <DialogTrigger asChild>
-                      <button className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/30">
-                        <ZoomIn className="h-5 w-5" />
+                      <button 
+                        className="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        aria-label={`Ver imagen completa: ${image.alt}`}
+                      >
+                        <ZoomIn className="h-4 w-4 sm:h-5 sm:w-5" />
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-4xl w-full p-0 border-0 bg-black/90">
-                      <div className="relative">
+                    <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 border-0 bg-black/95 overflow-hidden">
+                      <div className="relative w-full h-full flex items-center justify-center">
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-auto max-h-[85vh] object-contain mx-auto"
+                          className="max-w-full max-h-full object-contain"
+                          loading="lazy"
                         />
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                          <p className="text-white text-lg font-medium">{image.alt}</p>
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 sm:p-6">
+                          <p className="text-white text-base sm:text-lg font-medium text-center">
+                            {image.alt}
+                          </p>
                         </div>
                       </div>
                     </DialogContent>
@@ -93,16 +101,16 @@ const ImageGallery = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-ema-blue-900 mb-4">
+        <div className="text-center mt-12 md:mt-16">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg max-w-3xl mx-auto">
+            <h3 className="text-xl sm:text-2xl font-bold text-ema-blue-900 mb-3 sm:mb-4">
               ¿Te gustaría conocer más?
             </h3>
-            <p className="text-ema-blue-700 mb-6">
-              Visitanos y descubrí personalmente nuestras instalaciones y servicios. 
-              Estamos aquí para cuidarte.
+            <p className="text-ema-blue-700 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
+              Visitanos en el Centro Médico Libertador y descubrí personalmente 
+              nuestras instalaciones y servicios. Estamos aquí para cuidarte.
             </p>
-            <button className="bg-ema-blue-600 hover:bg-ema-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+            <button className="bg-ema-blue-600 hover:bg-ema-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-ema-blue-500 focus:ring-offset-2">
               Agendar Visita
             </button>
           </div>
