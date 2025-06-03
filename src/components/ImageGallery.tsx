@@ -1,42 +1,40 @@
 
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ZoomIn } from "lucide-react";
 
 const ImageGallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "/lovable-uploads/2de66669-077f-478d-b253-57c6215ec82d.png",
-      alt: "Fachada del Centro Médico Libertador - EMA SALUD",
+      src: "/lovable-uploads/045b0929-8382-4d22-a52e-e50a94ee86ff.png",
+      alt: "Sala de espera del Centro Médico Libertador con servicios especializados",
     },
     {
       id: 2,
-      src: "/lovable-uploads/f8839434-85f7-451b-a0eb-12938d00a6ca.png",
-      alt: "Entrada principal del Centro Médico Libertador con señalización EMA SALUD",
+      src: "/lovable-uploads/7ab62e26-ac53-4790-912b-4e7d81e7ea8c.png",
+      alt: "Área de recepción moderna con televisión y aire acondicionado",
     },
     {
       id: 3,
-      src: "/lovable-uploads/63310948-4cf8-4603-918c-ed6d68e5111b.png",
-      alt: "Sala de espera cómoda con servicios médicos especializados",
+      src: "/lovable-uploads/a2969afb-d447-4c06-acff-f7a5d48f68d0.png",
+      alt: "Sala de espera cómoda con sillas especializadas para pacientes",
     },
     {
       id: 4,
-      src: "/lovable-uploads/498f1acd-b7d1-4338-a484-fccdddf9643c.png",
-      alt: "Área de recepción moderna del centro médico",
+      src: "/lovable-uploads/04487e9a-e57d-452a-a9ce-67da27214de0.png",
+      alt: "Cartel exterior de EMA SALUD - Centro Médico Libertador",
     },
     {
       id: 5,
-      src: "/lovable-uploads/969aed98-6687-442f-8183-ae236f43690a.png",
-      alt: "Consultorios médicos especializados - EMA SALUD",
+      src: "/lovable-uploads/09fb3e19-47e5-4cf1-96f8-87f7689dfeb0.png",
+      alt: "Fachada principal del Centro Médico Libertador",
     },
     {
       id: 6,
-      src: "/lovable-uploads/2ac461d3-26d6-45b2-864a-00c01331fd5f.png",
-      alt: "Equipo médico profesional - Centro Médico Libertador",
+      src: "/lovable-uploads/9ba1f11d-d1b9-401b-bf13-d3812dd17ff0.png",
+      alt: "Entrada lateral del Centro Médico Libertador",
     }
   ];
 
@@ -54,82 +52,58 @@ const ImageGallery = () => {
           </p>
         </div>
 
-        {/* Carousel Gallery */}
+        {/* Grid Gallery */}
         <div className="max-w-6xl mx-auto">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {galleryImages.map((image) => (
-                <CarouselItem key={image.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 shadow-md bg-white">
-                    <CardContent className="p-0 relative">
-                      <AspectRatio ratio={4/3}>
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                          loading="lazy"
-                        />
-                        
-                        {/* Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-ema-blue-900/90 via-ema-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
-                            <p className="text-white font-medium text-xs sm:text-sm leading-tight">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {galleryImages.map((image) => (
+              <Card key={image.id} className="group overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 shadow-md bg-white">
+                <CardContent className="p-0 relative">
+                  <AspectRatio ratio={4/3}>
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-ema-blue-900/90 via-ema-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                        <p className="text-white font-medium text-xs sm:text-sm leading-tight">
+                          {image.alt}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Zoom Icon */}
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <button 
+                          className="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
+                          aria-label={`Ver imagen completa: ${image.alt}`}
+                        >
+                          <ZoomIn className="h-4 w-4 sm:h-5 sm:w-5" />
+                        </button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 border-0 bg-black/95 overflow-hidden">
+                        <div className="relative w-full h-full flex items-center justify-center">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="max-w-full max-h-full object-contain"
+                            loading="lazy"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 sm:p-6">
+                            <p className="text-white text-base sm:text-lg font-medium text-center">
                               {image.alt}
                             </p>
                           </div>
                         </div>
-
-                        {/* Zoom Icon */}
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <button 
-                              className="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
-                              aria-label={`Ver imagen completa: ${image.alt}`}
-                            >
-                              <ZoomIn className="h-4 w-4 sm:h-5 sm:w-5" />
-                            </button>
-                          </DialogTrigger>
-                          <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 border-0 bg-black/95 overflow-hidden">
-                            <div className="relative w-full h-full flex items-center justify-center">
-                              <img
-                                src={image.src}
-                                alt={image.alt}
-                                className="max-w-full max-h-full object-contain"
-                                loading="lazy"
-                              />
-                              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 sm:p-6">
-                                <p className="text-white text-base sm:text-lg font-medium text-center">
-                                  {image.alt}
-                                </p>
-                              </div>
-                            </div>
-                          </DialogContent>
-                        </Dialog>
-                      </AspectRatio>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex -left-4 lg:-left-12" />
-            <CarouselNext className="hidden sm:flex -right-4 lg:-right-12" />
-          </Carousel>
-        </div>
-
-        {/* Indicators for mobile */}
-        <div className="flex justify-center mt-6 sm:hidden">
-          <div className="flex space-x-2">
-            {galleryImages.map((_, index) => (
-              <div
-                key={index}
-                className="w-2 h-2 rounded-full bg-ema-blue-300"
-              />
+                      </DialogContent>
+                    </Dialog>
+                  </AspectRatio>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
