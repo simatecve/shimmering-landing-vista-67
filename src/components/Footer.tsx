@@ -1,5 +1,5 @@
 
-import { Heart, Mail, MapPin, Phone } from "lucide-react";
+import { Heart, Mail, MapPin, Phone, Settings } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -36,6 +36,19 @@ const Footer = () => {
                   <Mail className="h-5 w-5" />
                 </div>
               </div>
+
+              {/* Accesos Sistema Button */}
+              <div className="pt-4">
+                <a
+                  href="https://dash.emasalud.com.ve"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-ema-blue-600 hover:bg-ema-blue-500 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ema-blue-400 focus:ring-offset-2 focus:ring-offset-ema-blue-900"
+                >
+                  <Settings className="h-5 w-5" />
+                  <span>Accesos Sistema</span>
+                </a>
+              </div>
             </div>
             
             {/* Contact Info */}
@@ -46,11 +59,8 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <Mail className="h-5 w-5 text-ema-blue-300 mt-1 flex-shrink-0" />
                   <div className="space-y-1">
-                    <a href="mailto:info@ema-salud.com.ar" className="text-ema-blue-100 hover:text-white transition-colors duration-300 block">
-                      info@ema-salud.com.ar
-                    </a>
-                    <a href="mailto:contacto@ema-salud.com.ar" className="text-ema-blue-100 hover:text-white transition-colors duration-300 block">
-                      contacto@ema-salud.com.ar
+                    <a href="mailto:info@emasalud.com.ar" className="text-ema-blue-100 hover:text-white transition-colors duration-300 block">
+                      info@emasalud.com.ar
                     </a>
                   </div>
                 </div>
