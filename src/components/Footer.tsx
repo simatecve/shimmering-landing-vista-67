@@ -40,7 +40,7 @@ const Footer = () => {
               {/* Accesos Sistema Button */}
               <div className="pt-4">
                 <a
-                  href="https://dash.emasalud.com.ve"
+                  href="https://dash.emasalud.com.ar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 bg-ema-blue-600 hover:bg-ema-blue-500 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ema-blue-400 focus:ring-offset-2 focus:ring-offset-ema-blue-900"
