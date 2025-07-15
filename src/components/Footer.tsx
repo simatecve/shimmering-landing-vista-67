@@ -1,9 +1,6 @@
-
 import { Heart, Mail, MapPin, Phone, Settings } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-ema-blue-900 text-white py-16">
+  return <footer className="bg-ema-blue-900 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
@@ -11,11 +8,7 @@ const Footer = () => {
             <div className="md:col-span-2 space-y-6">
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-white rounded-lg p-1 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/969aed98-6687-442f-8183-ae236f43690a.png" 
-                    alt="EMA SALUD Logo" 
-                    className="w-10 h-10"
-                  />
+                  <img src="/lovable-uploads/969aed98-6687-442f-8183-ae236f43690a.png" alt="EMA SALUD Logo" className="w-10 h-10" />
                 </div>
                 <span className="text-2xl font-bold">EMA SALUD</span>
               </div>
@@ -26,9 +19,7 @@ const Footer = () => {
               </p>
               
               <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-ema-blue-700 rounded-full flex items-center justify-center hover:bg-ema-blue-600 transition-colors duration-300 cursor-pointer">
-                  <Heart className="h-5 w-5" />
-                </div>
+                
                 <div className="w-10 h-10 bg-ema-blue-700 rounded-full flex items-center justify-center hover:bg-ema-blue-600 transition-colors duration-300 cursor-pointer">
                   <Phone className="h-5 w-5" />
                 </div>
@@ -39,15 +30,7 @@ const Footer = () => {
 
               {/* Accesos Sistema Button */}
               <div className="pt-4">
-                <a
-                  href="https://dash.emasalud.com.ar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-ema-blue-600 hover:bg-ema-blue-500 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ema-blue-400 focus:ring-offset-2 focus:ring-offset-ema-blue-900"
-                >
-                  <Settings className="h-5 w-5" />
-                  <span>Accesos Sistema</span>
-                </a>
+                
               </div>
             </div>
             
@@ -102,8 +85,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
