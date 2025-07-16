@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-ema-blue-900">
+    <section id="contacto" className="py-20 bg-gradient-to-b from-white to-ema-blue-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -50,6 +50,24 @@ const ContactSection = () => {
                   >
                     contacto@ema-salud.com.ar
                   </a>
+                  <a 
+                    href="mailto:gerencia@ema-salud.com.ar"
+                    className="block text-lg text-ema-blue-700 hover:text-ema-blue-600 transition-colors duration-300 font-medium"
+                  >
+                    gerencia@ema-salud.com.ar
+                  </a>
+                  <a 
+                    href="mailto:facturacion@ema-salud.com.ar"
+                    className="block text-lg text-ema-blue-700 hover:text-ema-blue-600 transition-colors duration-300 font-medium"
+                  >
+                    facturacion@ema-salud.com.ar
+                  </a>
+                  <a 
+                    href="mailto:direccion@ema-salud.com.ar"
+                    className="block text-lg text-ema-blue-700 hover:text-ema-blue-600 transition-colors duration-300 font-medium"
+                  >
+                    direccion@ema-salud.com.ar
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -67,52 +85,18 @@ const ContactSection = () => {
                   DIRECCIÓN:
                 </h3>
                 
-                <p className="text-lg text-ema-blue-700 font-medium">
+                <a 
+                  href="https://maps.app.goo.gl/CwaCApdktrej8p756?g_st=ipc" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-lg text-ema-blue-700 hover:text-ema-blue-600 transition-colors duration-300 font-medium underline"
+                >
                   Libertador 457 ESTE
-                </p>
+                </a>
               </CardContent>
             </Card>
           </div>
           
-          {/* Affiliations Section */}
-          <div className="bg-gradient-to-br from-ema-blue-800 to-ema-blue-900 rounded-3xl p-8 md:p-12 text-center animate-scale-in">
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center">
-                <Phone className="h-10 w-10 text-white" />
-              </div>
-            </div>
-            
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              AFILIADOS:
-            </h3>
-            
-            <p className="text-ema-blue-100 text-lg mb-6 max-w-3xl mx-auto leading-relaxed">
-              Si querés afiliarte ingresá en nuestra web recolecta la información necesaria 
-              y podés enviarla a
-            </p>
-            
-            <a 
-              href="mailto:afiliaciones@ema-salud.com.ar"
-              className="inline-block bg-white text-ema-blue-800 px-8 py-3 rounded-full font-semibold hover:bg-ema-blue-50 transition-all duration-300 transform hover:scale-105 text-lg"
-            >
-              afiliaciones@ema-salud.com.ar
-            </a>
-            
-            <div className="mt-8 pt-8 border-t border-white/20">
-              <h4 className="text-xl font-semibold text-white mb-4">Tipos de Empleados:</h4>
-              <div className="grid md:grid-cols-3 gap-4 text-ema-blue-100">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <span className="font-medium">EMPLEADOS MONOTRIBUTISTA</span>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <span className="font-medium">MONOTRIBUTISTA SOCIALES</span>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <span className="font-medium">PERSONAL DE SERVICIO DOMÉSTICO</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

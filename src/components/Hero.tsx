@@ -27,7 +27,11 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-white text-ema-blue-800 hover:bg-ema-blue-50 px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              <Button 
+                size="lg" 
+                className="bg-white text-ema-blue-800 hover:bg-ema-blue-50 px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <Heart className="mr-2 h-5 w-5" />
                 Conocer Servicios
               </Button>

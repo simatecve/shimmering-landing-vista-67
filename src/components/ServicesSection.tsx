@@ -22,7 +22,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-ema-blue-50 to-white">
+    <section id="servicios" className="py-20 bg-gradient-to-b from-ema-blue-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -61,7 +61,10 @@ const ServicesSection = () => {
                   </p>
                   
                   <div className="mt-6 pt-6 border-t border-ema-blue-100">
-                    <button className="text-ema-blue-600 font-semibold hover:text-ema-blue-800 transition-colors duration-300 group-hover:underline">
+                    <button 
+                      className="text-ema-blue-600 font-semibold hover:text-ema-blue-800 transition-colors duration-300 group-hover:underline"
+                      onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
                       Conocer más →
                     </button>
                   </div>
@@ -79,8 +82,11 @@ const ServicesSection = () => {
               Estamos aquí para ayudarte. Contactanos y te brindaremos toda la información 
               que necesites sobre nuestros servicios.
             </p>
-            <button className="bg-white text-ema-blue-800 px-8 py-3 rounded-full font-semibold hover:bg-ema-blue-50 transition-all duration-300 transform hover:scale-105">
-              Contactar Ahora
+            <button 
+              className="bg-white text-ema-blue-800 px-8 py-3 rounded-full font-semibold hover:bg-ema-blue-50 transition-all duration-300 transform hover:scale-105"
+              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Contactar Servicios
             </button>
           </div>
         </div>
