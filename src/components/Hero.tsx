@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Heart, Shield, Stethoscope } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section id="inicio" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-ema-blue-900 via-ema-blue-800 to-ema-blue-700 pt-16">
+  return <section id="inicio" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-ema-blue-900 via-ema-blue-800 to-ema-blue-700 pt-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
@@ -30,21 +27,11 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                size="lg" 
-                className="bg-white text-ema-blue-800 hover:bg-ema-blue-50 px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-              >
+              <Button size="lg" className="bg-white text-ema-blue-800 hover:bg-ema-blue-50 px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 <Heart className="mr-2 h-5 w-5" />
                 Conocer Servicios
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-ema-blue-800 px-8 py-3 text-lg font-semibold transition-all duration-300"
-              >
-                <Shield className="mr-2 h-5 w-5" />
-                Contactar Ahora
-              </Button>
+              
             </div>
             
             {/* Features Icons */}
@@ -110,8 +97,12 @@ const Hero = () => {
               
               {/* Floating Elements */}
               <div className="absolute -top-6 -right-6 w-20 h-20 bg-white/20 rounded-full animate-float"></div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-ema-blue-400/30 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
-              <div className="absolute top-1/2 -right-8 w-6 h-6 bg-white/40 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-ema-blue-400/30 rounded-full animate-float" style={{
+              animationDelay: '1s'
+            }}></div>
+              <div className="absolute top-1/2 -right-8 w-6 h-6 bg-white/40 rounded-full animate-float" style={{
+              animationDelay: '2s'
+            }}></div>
             </div>
           </div>
         </div>
@@ -121,8 +112,6 @@ const Hero = () => {
           <ArrowDown className="h-6 w-6 text-white opacity-70" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
