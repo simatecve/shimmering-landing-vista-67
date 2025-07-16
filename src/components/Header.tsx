@@ -80,10 +80,10 @@ const Header = () => {
                     </div>
                   </div>
 
-                  {/* Acceso Aliados Column */}
+                  {/* Acceso Prestadores Column */}
                   <div className="flex flex-col items-center justify-center space-y-4">
                     <Users className="h-12 w-12 text-ema-blue-600" />
-                    <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Aliados</h3>
+                    <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Prestadores</h3>
                     <a
                       href="https://dash.ema-salud.com.ar"
                       target="_blank"
@@ -91,7 +91,7 @@ const Header = () => {
                       className="w-full"
                     >
                       <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
-                        Acceso Aliados
+                        Acceso Prestadores
                       </Button>
                     </a>
                   </div>
@@ -182,10 +182,10 @@ const Header = () => {
                       </div>
                     </div>
 
-                    {/* Acceso Aliados Column */}
+                    {/* Acceso Prestadores Column */}
                     <div className="flex flex-col items-center justify-center space-y-4">
                       <Users className="h-12 w-12 text-ema-blue-600" />
-                      <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Aliados</h3>
+                      <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Prestadores</h3>
                       <a
                         href="https://dash.ema-salud.com.ar"
                         target="_blank"
@@ -193,7 +193,7 @@ const Header = () => {
                         className="w-full"
                       >
                         <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
-                          Acceso Aliados
+                          Acceso Prestadores
                         </Button>
                       </a>
                     </div>
