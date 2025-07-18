@@ -54,7 +54,7 @@ const Header = () => {
                     Portal de Acceso EMA SALUD
                   </DialogTitle>
                 </DialogHeader>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-6">
                   {/* Emails Column */}
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2 mb-4">
@@ -111,6 +111,22 @@ const Header = () => {
                       </Button>
                     </a>
                   </div>
+
+                  {/* Acceso Webmail Column */}
+                  <div className="flex flex-col items-center justify-center space-y-4">
+                    <Mail className="h-12 w-12 text-ema-blue-600" />
+                    <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Webmail</h3>
+                    <a
+                      href="https://ema-salud.com.ar/webmail"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full"
+                    >
+                      <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Acceso Webmail
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </DialogContent>
             </Dialog>
@@ -156,7 +172,7 @@ const Header = () => {
                       Portal de Acceso EMA SALUD
                     </DialogTitle>
                   </DialogHeader>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-6">
                     {/* Emails Column */}
                     <div className="space-y-4">
                       <div className="flex items-center space-x-2 mb-4">
@@ -210,6 +226,22 @@ const Header = () => {
                       >
                         <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
                           Acceso al Sistema
+                        </Button>
+                      </a>
+                    </div>
+
+                    {/* Acceso Webmail Column */}
+                    <div className="flex flex-col items-center justify-center space-y-4">
+                      <Mail className="h-12 w-12 text-ema-blue-600" />
+                      <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Webmail</h3>
+                      <a
+                        href="https://ema-salud.com.ar/webmail"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+                          Acceso Webmail
                         </Button>
                       </a>
                     </div>
