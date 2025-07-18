@@ -54,7 +54,7 @@ const Header = () => {
                     Portal de Acceso EMA SALUD
                   </DialogTitle>
                 </DialogHeader>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
                   {/* Emails Column */}
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2 mb-4">
@@ -80,52 +80,55 @@ const Header = () => {
                     </div>
                   </div>
 
-                  {/* Acceso Prestadores Column */}
-                  <div className="flex flex-col items-center justify-center space-y-4">
-                    <Users className="h-12 w-12 text-ema-blue-600" />
-                    <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Prestadores</h3>
-                    <a
-                      href="https://dash.ema-salud.com.ar"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full"
-                    >
-                      <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
-                        Acceso Prestadores
-                      </Button>
-                    </a>
-                  </div>
+                  {/* Access Buttons Column */}
+                  <div className="space-y-6">
+                    {/* Acceso Prestadores */}
+                    <div className="flex flex-col items-center justify-center space-y-4">
+                      <Users className="h-12 w-12 text-ema-blue-600" />
+                      <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Prestadores</h3>
+                      <a
+                        href="https://dash.ema-salud.com.ar"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+                          Acceso Prestadores
+                        </Button>
+                      </a>
+                    </div>
 
-                  {/* Acceso al Sistema Column */}
-                  <div className="flex flex-col items-center justify-center space-y-4">
-                    <LogIn className="h-12 w-12 text-ema-blue-600" />
-                    <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Sistema Principal</h3>
-                    <a
-                      href="https://dash.ema-salud.com.ar"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full"
-                    >
-                      <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
-                        Acceso al Sistema
-                      </Button>
-                    </a>
-                  </div>
+                    {/* Acceso Webmail */}
+                    <div className="flex flex-col items-center justify-center space-y-4">
+                      <Mail className="h-12 w-12 text-ema-blue-600" />
+                      <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Webmail</h3>
+                      <a
+                        href="https://ema-salud.com.ar/webmail"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+                          Acceso Webmail
+                        </Button>
+                      </a>
+                    </div>
 
-                  {/* Acceso Webmail Column */}
-                  <div className="flex flex-col items-center justify-center space-y-4">
-                    <Mail className="h-12 w-12 text-ema-blue-600" />
-                    <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Webmail</h3>
-                    <a
-                      href="https://ema-salud.com.ar/webmail"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full"
-                    >
-                      <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
-                        Acceso Webmail
-                      </Button>
-                    </a>
+                    {/* Acceso al Sistema */}
+                    <div className="flex flex-col items-center justify-center space-y-4">
+                      <LogIn className="h-12 w-12 text-ema-blue-600" />
+                      <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Sistema Principal</h3>
+                      <a
+                        href="https://dash.ema-salud.com.ar"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+                          Acceso al Sistema
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </DialogContent>
@@ -172,7 +175,7 @@ const Header = () => {
                       Portal de Acceso EMA SALUD
                     </DialogTitle>
                   </DialogHeader>
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
                     {/* Emails Column */}
                     <div className="space-y-4">
                       <div className="flex items-center space-x-2 mb-4">
@@ -198,52 +201,55 @@ const Header = () => {
                       </div>
                     </div>
 
-                    {/* Acceso Prestadores Column */}
-                    <div className="flex flex-col items-center justify-center space-y-4">
-                      <Users className="h-12 w-12 text-ema-blue-600" />
-                      <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Prestadores</h3>
-                      <a
-                        href="https://dash.ema-salud.com.ar"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full"
-                      >
-                        <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
-                          Acceso Prestadores
-                        </Button>
-                      </a>
-                    </div>
+                    {/* Access Buttons Column */}
+                    <div className="space-y-6">
+                      {/* Acceso Prestadores */}
+                      <div className="flex flex-col items-center justify-center space-y-4">
+                        <Users className="h-12 w-12 text-ema-blue-600" />
+                        <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Prestadores</h3>
+                        <a
+                          href="https://dash.ema-salud.com.ar"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full"
+                        >
+                          <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+                            Acceso Prestadores
+                          </Button>
+                        </a>
+                      </div>
 
-                    {/* Acceso al Sistema Column */}
-                    <div className="flex flex-col items-center justify-center space-y-4">
-                      <LogIn className="h-12 w-12 text-ema-blue-600" />
-                      <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Sistema Principal</h3>
-                      <a
-                        href="https://dash.ema-salud.com.ar"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full"
-                      >
-                        <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
-                          Acceso al Sistema
-                        </Button>
-                      </a>
-                    </div>
+                      {/* Acceso Webmail */}
+                      <div className="flex flex-col items-center justify-center space-y-4">
+                        <Mail className="h-12 w-12 text-ema-blue-600" />
+                        <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Webmail</h3>
+                        <a
+                          href="https://ema-salud.com.ar/webmail"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full"
+                        >
+                          <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+                            Acceso Webmail
+                          </Button>
+                        </a>
+                      </div>
 
-                    {/* Acceso Webmail Column */}
-                    <div className="flex flex-col items-center justify-center space-y-4">
-                      <Mail className="h-12 w-12 text-ema-blue-600" />
-                      <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Acceso Webmail</h3>
-                      <a
-                        href="https://ema-salud.com.ar/webmail"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full"
-                      >
-                        <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
-                          Acceso Webmail
-                        </Button>
-                      </a>
+                      {/* Acceso al Sistema */}
+                      <div className="flex flex-col items-center justify-center space-y-4">
+                        <LogIn className="h-12 w-12 text-ema-blue-600" />
+                        <h3 className="text-lg font-semibold text-ema-blue-900 text-center">Sistema Principal</h3>
+                        <a
+                          href="https://dash.ema-salud.com.ar"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full"
+                        >
+                          <Button className="w-full bg-ema-blue-600 hover:bg-ema-blue-700 text-white py-6 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+                            Acceso al Sistema
+                          </Button>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </DialogContent>
