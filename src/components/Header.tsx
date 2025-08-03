@@ -29,7 +29,7 @@ const Header = () => {
             <a href="#nosotros" className="text-ema-blue-800 hover:text-ema-blue-600 font-medium transition-colors duration-300">
               Nosotros
             </a>
-            <a href="#servicios" className="text-ema-blue-800 hover:text-ema-blue-600 font-medium transition-colors duration-300">
+            <a href="#especialidades" className="text-ema-blue-800 hover:text-ema-blue-600 font-medium transition-colors duration-300">
               Servicios
             </a>
             <a href="#galeria" className="text-ema-blue-800 hover:text-ema-blue-600 font-medium transition-colors duration-300">
@@ -154,7 +154,7 @@ const Header = () => {
               <a href="#nosotros" className="text-ema-blue-800 hover:text-ema-blue-600 font-medium transition-colors duration-300">
                 Nosotros
               </a>
-              <a href="#servicios" className="text-ema-blue-800 hover:text-ema-blue-600 font-medium transition-colors duration-300">
+              <a href="#especialidades" className="text-ema-blue-800 hover:text-ema-blue-600 font-medium transition-colors duration-300">
                 Servicios
               </a>
               <a href="#galeria" className="text-ema-blue-800 hover:text-ema-blue-600 font-medium transition-colors duration-300">

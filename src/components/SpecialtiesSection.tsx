@@ -36,7 +36,7 @@ const SpecialtiesSection = () => {
   const icons = [Stethoscope, Heart, Eye, Brain, Baby, Activity];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-ema-blue-50 to-white">
+    <section id="especialidades" className="py-20 bg-gradient-to-b from-ema-blue-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
