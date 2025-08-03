@@ -68,6 +68,12 @@ const ContactSection = () => {
                   >
                     direccion@ema-salud.com.ar
                   </a>
+                  <a 
+                    href="mailto:uaguero@ema-salud.com.ar"
+                    className="block text-lg text-ema-blue-700 hover:text-ema-blue-600 transition-colors duration-300 font-medium"
+                  >
+                    uaguero@ema-salud.com.ar
+                  </a>
                 </div>
               </CardContent>
             </Card>
