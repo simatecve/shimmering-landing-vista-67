@@ -118,9 +118,14 @@ const ImageGallery = () => {
               Visitanos en el Centro Médico Libertador y descubrí personalmente 
               nuestras instalaciones y servicios. Estamos aquí para cuidarte.
             </p>
-            <button className="bg-ema-blue-600 hover:bg-ema-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-ema-blue-500 focus:ring-offset-2">
+            <a 
+              href="https://wa.me/5492646192325?text=Hola,%20me%20gustaría%20agendar%20una%20visita%20al%20Centro%20Médico%20Libertador"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-ema-blue-600 hover:bg-ema-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-ema-blue-500 focus:ring-offset-2"
+            >
               Agendar Visita
-            </button>
+            </a>
           </div>
         </div>
       </div>
