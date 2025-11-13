@@ -50,7 +50,7 @@ const Footer = () => {
                 
                 <div className="flex items-start space-x-3">
                   <MapPin className="h-5 w-5 text-ema-blue-300 mt-1 flex-shrink-0" />
-                  <span className="text-ema-blue-100">Libertador 457 ESTE</span>
+                  <span className="text-ema-blue-100">San Luis 713 este , esquina  calle Guemes</span>
                 </div>
               </div>
             </div>
